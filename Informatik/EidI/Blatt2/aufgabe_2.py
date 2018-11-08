@@ -14,6 +14,7 @@ def find_line(eingabe):
 	file_dict = open("dictionary.txt","r")
 	dictionary = file_dict.read()
 	index = 0
+	# Reihe für Reihe durchgehen
 	for x in dictionary.split("\n"):
 		index+=1
 		if eingabe == x:
@@ -29,19 +30,19 @@ def build():
 	file_dict = open("dictionary.txt","w")
 	file_original = open("de_DE_frami.dic","r")
 
-	for x in file_original:
+	for char in file_original:
 		# Leerzeile zwischen Kommentar und Wörterbuchinhalt mit "#" füllen
-		if find_pos(x,"\n") == 0:
-			x = "#"
+		if find_pos(char,"\n") == 0:
+			char = "#"
 		# Zeilen, die nicht "#" beinhalten bzw. beginnen von Anfang bis zum Trennstrich in das neue Wörterbuch schreiben
-		if find_pos(x,"#") == -1:
-			file_dict.write(x[0:find_pos(x,"/")] + "\n")
+		if find_pos(char,"#") == -1:
+			file_dict.write(x[0:find_pos(char,"/")] + "\n")
 
 	file_dict.close()
 	file_original.close()
 	print("dictionary.txt erstellt.")
 
-if input("Ist dictionary.txt bereits erstellt? (J/N)").lower() == "n":
+if input("Dictionary.txt erstellen? (J/*)").lower() == "j":
 	build()
 else:
 	eingabe = input("Wort: ")
