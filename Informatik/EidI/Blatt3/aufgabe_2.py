@@ -1,18 +1,19 @@
 # Eingabe der Listen
 H = [5,6,7]
 K = [4,H]
-L = []
+L = [1,K,H]
 
 def intSuperliste(l):
 	if len(l) == 0:
 		return True
-	for x in l:
-		if type(l[-1]) == int:
-			return True 
-		elif type(x) == list:
-			intSuperliste(x)
-		else:
-			return False
+	else:
+		for x in l:
+			if type(l[-1]) == int:
+				return True 
+			elif type(x) == list:
+				intSuperliste(x)
+			else:
+				return False
 
 def kopie(l):
 	SL = []
