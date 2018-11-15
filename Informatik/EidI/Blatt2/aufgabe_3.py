@@ -6,7 +6,7 @@ def bin_rek_search(w,e,lg,rg):
 	mw = (lg+rg)/2.0
 	# rechte Grenze kann nicht groesser als linke Grenze sein
 	if rg < lg:
-		return "Error"
+		return "Fehler!"
 	# Wenn der Abstand zwischen der Kubik des Mittelwerts und der eingegebenen Zahl kleiner gleich der Fehlertoleranz ist
 	if abs(mw**3-w)<=e:
 		return mw
@@ -25,12 +25,12 @@ epsilon = float(input("Fehlertoleranz >0: "))
 
 if epsilon > 0 :
 	if w>0:
-		print("Durch rekursive Binäresuche angenäherte Kubikwurzel mit einer Fehlertoleranz von weniger-gleich",epsilon,":",bin_rek_search(w,epsilon,0,w))
 		print("Durch Termumformung angenäherte Kubikwurzel: [Zahl**(1/3)]", w**(1/3))
+		print("Durch rekursive Binäresuche angenäherte Kubikwurzel mit einer Fehlertoleranz von weniger-gleich",epsilon,":",bin_rek_search(w,epsilon,0,w))
 	elif w<0:
 		w = abs(w)
-		print("Durch rekursive Binäresuche angenäherte Kubikwurzel mit einer Fehlertoleranz von weniger-gleich",epsilon,": -",bin_rek_search(w,epsilon,0,w))
 		print("Durch Termumformung angenäherte Kubikwurzel: [Zahl**(1/3)]: -", w**(1/3))
+		print("Durch rekursive Binäresuche angenäherte Kubikwurzel mit einer Fehlertoleranz von weniger-gleich",epsilon,": -",bin_rek_search(w,epsilon,0,w))
 	else:
 		print("Fehler: Zahl darf nicht 0 sein.")
 else:

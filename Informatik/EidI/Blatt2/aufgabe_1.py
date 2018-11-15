@@ -1,19 +1,19 @@
 def checkASCII(x):
 	"""
-	Überprüfung ob Buchstabe x ein ASCII zeichen ist
+	Überprüfung ob Buchstabe x ein ASCII Zeichen ist
 	"""
-	for z in x:
-		if ord(z) >= 0 and ord(z) <=127:
-			return True
-	return False
+	for char in x:
+		if ord(char) > 127:
+			return False
+	return True
 
 def caesar(x,y):
 	"""
 	Zeichenkette x um y Stellen nach rechts verschieben
 	"""
 	w = ""
-	for z in x:
-		w = w + chr((ord(z)+y)%127)
+	for char in x:
+		w += chr((ord(char)+y)%128)
 	return w
 
 def un_caesar(x,y):
@@ -21,8 +21,8 @@ def un_caesar(x,y):
 	Zeichenkette x um y Stellen nach links zurückverschieben
 	"""
 	w = ""
-	for z in x:
-		w = w + chr((ord(z)-y)%127)
+	for char in x:
+		w += chr((ord(char)-y)%128)
 	return w
 
 while True:

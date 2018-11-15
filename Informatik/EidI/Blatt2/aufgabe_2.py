@@ -36,7 +36,7 @@ def build():
 			char = "#"
 		# Zeilen, die nicht "#" beinhalten bzw. beginnen von Anfang bis zum Trennstrich in das neue Wörterbuch schreiben
 		if find_pos(char,"#") == -1:
-			file_dict.write(x[0:find_pos(char,"/")] + "\n")
+			file_dict.write(char[0:find_pos(char,"/")] + "\n")
 
 	file_dict.close()
 	file_original.close()
