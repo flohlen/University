@@ -25,4 +25,4 @@ def baum_regel_2(x):
 		return x
 
 eingabe = float(input("Baumhöhe:"))
-print("Wenn der groesste Baum",eingabe,"ist, dass ist der kleine Baum",baum(eingabe))
+print("Wenn der groesste Baum",eingabe,"ist, dann ist der kleinste Baum",baum(eingabe))
