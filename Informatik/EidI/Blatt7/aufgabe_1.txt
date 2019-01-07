@@ -1,0 +1,135 @@
+Aufgabe 1:
+
+a)
+
+Programm:
+def programm1(n):  # Eingabegroesse: n
+	if n < 2:
+		return False
+	divisor = 2
+	while divisor * 2 < n:
+		divisor += 1
+		if n % divisor == 0:
+			return False
+	return True
+
+
+Ihre Loesung:
+
+Das Programm berechnet die Funktion:
+
+Ob n eine primzahl oder 4 ist
+
+
+Best Case:
+
+konstante anzahl an operationen bei n<2
+-> O(1)
+wenn n<2 ist dann wird die if-abfrage betreten und es wird 'False' zurueckgeggeben
+
+
+Worst Case:
+lineare anzahl an operationen bei grossen primzahlen bzw. in bezug auf die eingabegroesse n>=2
+-> O(n)
+
+
+
+
+b)
+
+Programm: 
+def programm2(n):  # Eingabegroesse: n
+	i = 0
+	while i <= n:
+		i += 1
+		if i ** 2 > 0:
+			break
+	return i
+
+Ihre Loesung:
+
+Das Programm berechnet die Funktion:
+
+ob n nicht- bzw. negativ ist.
+wenn n negativ ist, wird 0 ausgegeben
+wenn n positiv (oder 0) ist, wird 1 ausgegeben
+
+
+Best Case:
+
+O(1) fuer n<0
+die while-schleife wird uebersprungen
+
+
+Worst Case:
+
+O(1) für n<=0
+die while-schleife wird einmal ausgefuehrt, da i um 1 auf 1 erhoeht wird und wenn i**2 bzw 1**2=1 groesser als 0 ist, wird die schleife verlassen 
+
+c) 
+
+Programm:
+def programm3(L):  # Eingabegroesse: len(L)
+	  for i in range(len(L)):
+		sortiert = True
+	  	for j in range(i,len(L)):
+	  		if L[i] > L[i+1]:
+	  			L[i], L[i+1] = L[i+1], L[i]
+	  			sortiert = False
+		if sortiert == True:
+		      break
+	  return L[:]
+
+Ihre Loesung:
+
+Das Programm berechnet die Funktion:
+
+sortierung einer liste L
+
+
+Best Case:
+
+
+
+
+Worst Case:
+
+
+
+
+
+d)
+
+def programm4(n):  # Eingabegroesse: n
+	i = 1
+	for j in range(n):
+		i *= 2
+	j = 1
+	for k in range(i):
+		k *= 2
+	return k
+
+
+Ihre Loesung:
+
+Das Programm berechnet die Funktion:
+
+2^n-2
+
+
+Best Case:
+
+konstante laufzeit
+O(1) für n<0
+erste for-schleife wird nicht betreten
+zweite for-schleife wird lediglich einmal durchlaufen, da i = 1 und range() ist 0 bi i-1
+
+
+Worst Case:
+
+lineare laufzeit
+O(n) = O(n-1)*O(n^2) für n>0
+erste for-schleife wird (n-1)-mal ausgeführt, daruch wird i = 0
+zweite for-schleife wird n^2 mal ausgeführt  
+
+

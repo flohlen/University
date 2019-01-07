@@ -1,0 +1,75 @@
+Aufgabe 2:
+
+def loese(n):
+	if n == 0 or n == 2:
+		return True
+	elif n == 1:
+		return False
+	else:
+		return not loese(n-1) or not loese(n-2) or not loese(n-3)
+
+
+a)
+
+Wie ist die Laufzeit des Programms? Wie lauten passende Rekurrenzgleichungen?
+
+laufzeit:
+	O(2^n).
+	einfachere und groessere abschaetzung ist 3^n.
+
+abschaetzung für O(3^n):
+	t_0, t_1 und t_2 sind die basisfaelle, jeweils mit konstanter laufzeit.
+	unabhaengig von der genauen groesse, wird für die konstante laufzeit eine variable c eingeführt.
+
+fuer n >= 3 gilt:
+	t_n <= t_n-1 + t_n-2 + t_n-3 + c.
+	im worst-case eines (rekursions-)aufrufs (n%4 == 1 or n%4 == 1, mit n>=3) muessen alle 3 vorgaenger von t ausgewertet bzw. ausgerechnet werden.
+	jedoch gibt es ebenfalls faelle (n%4 == 2, mit n>= 3), bei denen der rueckgabewert fuer "not loese(n-1)" breits True zurückgibt,
+	daher ist diese abschaetzung sehr grob und stellt kein supremum dar.
+
+	es gilt t_n >= t_n-1, da in den basisfaellen gilt "=".
+	ausserdem gilt in den rekursionsfaellen, dass mindestens "loese(n-1)", also t_n-1 ausgewertet werden muss.
+
+	=> somit gilt fuer n >= 3: 
+		t_n <= t_n-1 + t_n-2 + t_n-3 + c <= t_n-1 + t_n-1 + t_n-1 + c = 3 * t_n-1 +c
+
+fuer n <= 2 gilt:
+	t_0 = c, t_1 = c und t_2 = c
+
+	als die obere schranke kann man t'_n = c fuer n >= 3 und t'_n = c + 3 * t'_n-1 werten.
+	diese rekurrenzgleichung wird in b) und c) ausgewertet und bewiesen.
+
+
+b) Geben Sie ein vereinfachtes System an, und begründen Sie Ihre Abschätzungen. Geben Sie eine geschlossene Form für Ihr neues System an.
+
+t'_2 = c
+t'_n = 3 * t'_n-1 + c fuer n >= 3
+
+durch einsetzen:
+	t'_n = 3 * (3 * (3 * (...3 * (3 * (t'_2) + c) + c...) + c) + c) + c
+		 = 3^(n-2) * c + 3^(n-3) * c + ... + 3^(n-(n-1)) * c + c
+		 = c * partial-summe der geometrische Reihe bis 3^(n-2)
+		 = c * (3^(n-1)-1 / (3-1))
+		 = 1/2 * c * (3^(n-1) - 1)
+
+
+c) Beweisen Sie die Korrektheit der geschlossenen Form mittels Induktion. Schließen Sie geeignet auf die worst-case-Laufzeit von loese(n)
+
+IA:
+	n = 3
+	=> t_3 	= 1/2 * c * (3^2 - 1)
+			= 4 * c
+			= 3 * c + c
+			= 3 * t_3 + c
+
+IS:
+	n -> (n+1)
+	=> t_n+1 	= 3 * t_n +c 
+				=(IV)= 3 * (1/2 * c * (3^(n-1) - 1)) + c
+				= 1/2 * c * 3^n - 3 * 1/2 * c +c
+				= 1/2 * c * 3^n - 1/2 * c
+				= 1/2 * c * (3^n - 1) 
+
+				w.z.b.w
+
+O(1/2 * c * 3^(n-1) - 1/2 * c)) = O(3^(n-1)) = O(1/3 * 3^n) = O(3^n)

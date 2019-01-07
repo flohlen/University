@@ -1,0 +1,74 @@
+Aufgabe 1)
+
+a)
+i) f(n) = 7n und g(n) = n
+f(n) <=c*g(n) 
+7n <=c*n
+Gesucht ist c (Konstante): Setze n=2
+7*2<=c*2
+14<=2c |:2
+7<=c | c=7
+c in 7n<=c*n einsetzten 
+7*2<=7*2 -->14<=14
+
+ii) f(n)= n^3+100n^2 g(n)=n^3
+f(n) <=c*g(n) 
+n^3+100n^2  <=c*n^3
+Gesucht ist c (Konstante): Setze n=2
+2^3+1002^2  <=c*2^3
+8+400<=c*8
+408<=c*8 |:8
+51<=c |c=51
+C einsetzten in n^3+100n^2  <=c*n^3
+408<=408
+
+iii) f(n)=2^(2n) und g(n)=2^n
+2^(2n)<=c*2^n
+Gesucht ist c (Konstante): Setze n=4
+2^(2*4)<=c*2^4
+2^8<=c*2^4
+256<=c*16 |:16
+16<=c | c=16
+C einsetzten in 2^(2n)<=c*2^n
+256<=16*16
+256<=256
+
+b)
+i) f(n)=10n und g(n)=n^2-10n c=1
+f(n) <= c*g(n)
+10n<=1*n^2-10n
+10n<=n^2-10n |+10n
+20n<=n^2 |:n
+20<=n | n=20
+n einsetzten in 10n<=1*n^2-10n
+10*20<=1+20^2-10*20
+200<=200
+
+ii) f(n)=n*log(n) g(n)=n^2-4n c=0.05
+f(n)<=c*g(n)
+n*log(n)<=0.05*n^2-4n | weil n^2 mehr steigt als n*log(n) kann man es wegstreichen
+n<=0.05*n^2-4n |+4n |:0.05
+100n<=n^2 |:n
+100<=n |n=100
+Einsetzten von n in n<=0.05*n^2-4n
+100<=0.05*100^2-4*100
+100<=100
+
+iii) f(n)=1000n^2 und g(n)=2^n c=0.25
+1000n^2<=0.25*2^n | n^2 kann weggestrichen werden, da 2^n dominiert
+1000<=0.25*2^n | *4
+4000<=2^n | log()
+log(4000)<=log(2)*n |:log(2)
+log(4000):log(2)<=n
+11.97<=n | n=12
+Einsetzten von n in
+1000<=0.25*2^12
+1000<=1024 
+
+
+
+
+
+
+
+

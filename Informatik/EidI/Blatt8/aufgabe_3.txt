@@ -1,0 +1,123 @@
+Aufgabe 3
+
+
+a)
+
+rekurrenzgleichungen:
+	i):
+		n_x = 0 fuer x < 2
+		n_x = n_x-1 + 1 fuer x >= 2
+
+	ii):
+		n_x = 0 fuer x < 2
+		n_x = n_x//2 + n_x-x//2 + 1 fuer x >=2
+
+	iii):
+		n_x = 0 fuer x < 2
+		n_x = n_x-1 + x-2 + 1 = n_x-1 + x-1 für x >= 2
+
+	iv):
+		n_x = 0 fuer x < 2
+		n_x = 2 * n_x-1 + 1 fuer x >= 2 
+
+
+b)
+
+i):
+	geschlossene form:
+		n_x = x-1 fuer x >= 1.
+
+	begruendung:
+		n_x = n_x-1 + 1
+			= n_x-2 + 2
+			= n_x-3 + 3
+			= ...
+			= n_x-(x-1) + (x-1)
+			= n_1 + x -1
+			= 0 + x - 1
+			= x-1 
+
+ii):
+	geschlossene form:
+		n_x = x-1 fuer x >= 1
+
+	begruendung:
+		IA: 
+			n_2 = n_1 + n_1 + 1
+				= 2 * 0 + 1
+				= 1
+				= 2 - 1
+
+		IS:
+			x -> x+1, d.h. n_x+1 = x+1 - 1 = x
+
+			n_x+1 	= n_(x+1)//2 + n_(x+1)-(x+1)//2 + 1
+					= (x+1)//2 - 1 + (x+1)-(x+1)//2 - 1 + 1
+					= (x+1)//2 - (x+1)//2 + x + 2 - 2
+					= 0 + x
+					= x 
+
+					w.z.b.w
+
+iii):
+	geschlossene form:
+		n_x = 1/2 * (x^2-x) fuer alle x e N (natuerliche Zahlen)
+	
+	gegruendung:
+		n_x = n_x-1 + x-1
+			= n_x-2 + x-2 + x-1
+			= n_x-2 + 2x - (gaussumme bis 2)
+			= n_x-3 + 3 * x - (gaussumme bis 3 )
+			= ... 
+			= n_x-(x-1) + (x-1)*x - gaussumme bis (x-1)
+			= 0 + x^2 - x - x * (x-1)/2
+			= x^2 - x - 1/2 * x^2 + 1/2 * x
+			= 1/2 * (x^2-x)
+
+iv):
+	geschlossene form:
+		n_x = 2^(n-1) -1 fuer x >= 1
+
+	begruendung:
+		n_x = 2 * n_x-1 + 1
+			= 2 * (2 * n_x-2 + 1) + 1
+			= 2 * (2 * (... 2 * (n_(x-(x-1)) + 1) + 1...) + 1) + 1
+			= 2^(x-1) * n_1 + 2^(x-2) + 2^(x-3) + ... + 2^1 + 1
+			= 2^(x-2) + 2^(x-3) + ... + 2^1 + 1
+			= partialsume der geometrische Rreihe bis 2^(n-2) 
+			= (2^(n-1)-1)/(2-1)
+			= 2^(n-1) - 1
+
+
+c)
+
+Turnierdauer bei 32 Teilnehmern für i):
+	31 Minuten
+
+Turnierdauer bei 32 Teilnehmern für ii):
+	31 Minuten
+
+Turnierdauer bei 32 Teilnehmern für iii):
+	496 Minuten = 8 Stunden 16 Minuten
+
+Turnierdauer bei 32 Teilnehmern für iv):
+	2147483647 Minuten = ~35791394 Stunden = ~1491308 Tage = ~4085 Jahre
+
+
+d) (Sternchen) (Jeweils mit kurzer Begründung)
+
+Turnierdauer in Abhängigkeit von n für i)
+
+
+
+Turnierdauer in Abhängigkeit von n für ii)
+
+
+
+Turnierdauer in Abhängigkeit von n für iii)
+
+
+
+Turnierdauer in Abhängigkeit von n für iv)
+
+
