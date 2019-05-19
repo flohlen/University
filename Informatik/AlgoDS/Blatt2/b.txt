@@ -1,0 +1,12 @@
+double d = 5.7;
+int i = 3;
+char c = ’a’;
+
+long g = (5 < d) ? 2 * c : 4L;
+
+Als erstes wird der Ausdruck in der Klammer ausgewertet. Bei dem Vergleich von einem int (5) und einem double (d = 5.7) wird der int (5) zu einem double konvertiert. Im Anschluss wird der Vergleich ausgeführt, dessen Ergebnis ein boolean, in diesem Falls True ist.
+Danach wird die Multiplikation "2 * c" durchgeführt. Dabei wird char c mit dem ASCII-Code von 'a' zu einem int mit dem Wert 97 konvertiert und mit einem int mit dem Wert 2 multipliziert. Das Ergebnis ist 194 und vom Typ int.
+Die 4 wird als Long initialisiert.
+Als nächstes wird der Fragezeichen-Operator bzw. der Bedingungsoperator ausgeführt. Da der Klammer-Ausdruck zu True auswertet, wird dem long g der Wert der Multiplikation zugewiesen. Da g ein long ist und das Ergebnis der Multiplikation (194) ein int, wird der int zu einem long konvertiert und im Anschluss (als letztes) dem long g zugewiesen. 
+
+Der long 4 wird nicht weiter genutzt.

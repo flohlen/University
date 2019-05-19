@@ -1,0 +1,24 @@
+1)
+deterministisch -> Im Algorithmus spielt weder Zufall noch Willkür eine Rolle, deshalb ist er deterministisch.
+determiniert -> Weil der Algorithmus deterministisch ist.
+terminierend -> Der Algorithmus terminiert nach n Schleifendurchläufen.
+
+2)
+deterministisch -> In der Schleife spielt Zufall eine Rolle, daher nicht determinstisch.
+determiniert -> Da die Aanzahl der Schritte zufällig ist, wird auch die Summer der ausgewählten Arrayeinträge nicht immer gleich sein.
+terminierend -> Der Algorithmus wird nach einer zufälligen Anzahl an Schleifendurchläufen terminieren, jedoch ist diese Anzahl <=n.
+
+3)
+deterministisch -> Es werden bei gleicher Eingabe immer die gleichen Schritte durchgeführt, aber es gibt nicht immer die gleichen Zwischenergebnise, daher nicht deterministisch.
+determiniert -> Jedoch wird eine Zufälliger Arrayeintrag zu "result" addiert, daher nicht determiniert.
+terminierend -> Der Algorithmus terminiert nach 2 n Schleifendurchläufen, die erste schleife wird n mal durchlaufen und danach die do-while schleife n mal.
+
+4)
+deterministisch -> Der algorithmus beinhaltet weder Zufall noch Willkür und die Zwischenergebnisse werden bei jeder ausführung immer gleich sein
+determiniert -> Weil der Algorithmus deterministisch ist.
+terminierend -> Es ist möglich, dass n so gewählt wird, sodass die Schleife unendlich läuft, daher ist er nicht terminierend.
+
+5)
+deterministisch -> Es werden immer die gleichen schritte durchgeführt und die Zwischen ergebnisse sind gleich, außerdem spielt weder zufall noch Willkür eine Rolle.
+determiniert -> Weil der Algorithmus deterministisch ist.
+terminierend -> Es ist möglich dass die eingabe Z so gewählt wird, dass der Algorithmus nie terminiert.

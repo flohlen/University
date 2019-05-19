@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FindPairs",
+            "request": "launch",
+            "mainClass": "FindPairs",
+            "projectName": "AlgoDS_9972eae4"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ${file}",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "${file}",
+            "args": ""
+        }
+    ]
+}

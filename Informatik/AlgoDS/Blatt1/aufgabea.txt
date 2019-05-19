@@ -1,0 +1,7 @@
+1) Algorithmus, weil deterministisch und determinierend, jedoch nicht terminierend.
+
+2) kein Algorithmus, weil in der Ausgabe der Ergebnisse Willkür eine Rolle spielt (die Ergebnisse werden in beliebiger Reihenfolge ausgegeben).
+
+3) Unter der Vorraussetzung, dass das Geld abgehoben werden könnte, wäre es ein Algorithmus, da es feste Schritte gibt, immer das gleiche Ergebnis eintritt und es ein Ende gibt.
+
+Da jedoch Fritz, weil er ein Mensch ist nicht so lange lebt, ist der Ablauf niemals erfüllbar und daher kein Algorithmus.

@@ -1,0 +1,17 @@
+...
+int n = 4;
+
+if (3 < n || --n < 4) {
+    System.out.println("Erster Zweig erreicht");
+}
+System.out.println("n = " + n); // n = 4
+
+if (3 < n | --n < 4) {
+    System.out.println("Zweiter Zweig erreicht");
+}
+System.out.println("n = " + n); // n = 3
+...
+
+"||" ist ein boolischer Operator. Der sogenannte Oder-Operator, das heisst sobald mindestens ein Operanden in der If-Abfrage wahr bzw. True ist, wird abgebrochen und der entsprechende Code-Block ausgeführt. In diesem Falle wertet 3 < n bzw. 3 < 4 zu True aus und es wird "Erster Zweig erreicht" ausgegeben. Dabei bleibt n unverändert mit dem Wert 4.
+"|" hin gegen ist ein Operator zur Manipulation von Bits. Ein sogenanntes bitweises Oder, es produziert eine 1 sobald einer seiner Operanden eine 1 ist. Zunächst wird "3 < n" bzw. "3 < 4" zu True bzw. 1 ausgewertet, danach "--n < 4" dabei wird zuerst n um 1 auf 3 verringert. Danach wird erst der grösser/kleiner Vergleich ausgewertet. Da "n < 4" bzw. "3 < 4" ebenfalls zu True bzw. 1 ausgewertet ist das Ergebnis des bitweisen "oder-vergleiches" also "1 | 1" ebenfalls 1 bzw. True. Daher wird "Zweiter Zweig erreicht" ausgegeben.
+"--n" hat den Nebeneffekt, dass n um 1 verringert wird. Da in der ersten If-Abfrage die Bedingung vor dem durchführen bereits erfüllt wurde, wurde n nicht um 1 verringert. Da aber in der zweiten If-Abfrage bitweise verglichen wird, muss n um 1 verringert werden und der Nebeneffekt tritt in Kraft.
