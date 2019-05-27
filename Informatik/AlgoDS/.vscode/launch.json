@@ -2,16 +2,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - ATown",
-            "request": "launch",
-            "console": "externalTerminal",
-            "stopOnEntry": false,
-            "mainClass": "ATown",
-            "args": "",
-            "projectName": "AlgoDS_9972eae4"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - FindPairs",
             "request": "launch",
             "mainClass": "FindPairs",
