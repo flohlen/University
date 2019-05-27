@@ -1,0 +1,59 @@
+Zunaechst Test der Ringspeicher-Implementierung:
+enqueue aufgerufen fuer: Astrid Ahorn
+enqueue aufgerufen fuer: Bertha Baer
+enqueue aufgerufen fuer: Dirk Dachs
+enqueue aufgerufen fuer: Egon Esel
+loesche: Astrid Ahorn
+loesche: Bertha Baer
+enqueue aufgerufen fuer: Fritz Flamingo
+enqueue aufgerufen fuer: Gabi Gazelle
+enqueue aufgerufen fuer: Hans Harmlos
+loesche: Dirk Dachs
+enqueue aufgerufen fuer: Susi Sorglos
+enqueue aufgerufen fuer: Paul Panther
+Einfuegeversuch von Paul Panther fuehrt zu Ausnahme
+Inhalt Ringspeicher: 
+    Egon Esel
+    Fritz Flamingo
+    Gabi Gazelle
+    Hans Harmlos
+    Susi Sorglos
+
+loesche: Egon Esel
+loesche: Fritz Flamingo
+loesche: Gabi Gazelle
+loesche: Hans Harmlos
+loesche: Susi Sorglos
+Keiner mehr da
+Keiner mehr da
+Inhalt Ringspeicher: 
+
+Nun Test der Listen-Implementierung:
+enqueue aufgerufen fuer: Astrid Ahorn
+enqueue aufgerufen fuer: Bertha Baer
+enqueue aufgerufen fuer: Dirk Dachs
+enqueue aufgerufen fuer: Egon Esel
+loesche: Astrid Ahorn
+loesche: Bertha Baer
+enqueue aufgerufen fuer: Fritz Flamingo
+enqueue aufgerufen fuer: Gabi Gazelle
+enqueue aufgerufen fuer: Hans Harmlos
+loesche: Dirk Dachs
+enqueue aufgerufen fuer: Susi Sorglos
+enqueue aufgerufen fuer: Paul Panther
+Inhalt Liste: 
+    Egon Esel
+    Fritz Flamingo
+    Gabi Gazelle
+    Hans Harmlos
+    Susi Sorglos
+    Paul Panther
+
+loesche: Egon Esel
+loesche: Fritz Flamingo
+loesche: Gabi Gazelle
+loesche: Hans Harmlos
+loesche: Susi Sorglos
+loesche: Paul Panther
+Keiner mehr da
+Inhalt Liste: 
