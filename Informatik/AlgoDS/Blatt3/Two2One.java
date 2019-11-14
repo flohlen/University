@@ -1,6 +1,6 @@
-import java.util.*;
+//import java.util.*;
 
-class Two2One{
+/*class Two2One{
 
     public static void main(String[]args){
 
@@ -54,4 +54,4 @@ class Two2One{
         }
     }
 
-}
+}*/

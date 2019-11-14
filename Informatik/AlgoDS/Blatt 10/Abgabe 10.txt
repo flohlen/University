@@ -1,0 +1,20 @@
+a)
+	Da bei der Levelorder-Traversierung jeder der n Knoten im Baum genau einmal besucht wird ist die Laufzeit von der Traversierung Linear.
+	Daraus ergibt sich eine Worst-Case-Laufzeit von O(n)
+b)	
+	Da bei der Preorder-Traversierung jeder der n Knoten im Baum genau einmal besucht wird ist die Laufzeit von der Traversierung Linear.
+	Daraus ergibt sich eine Worst-Case-Laufzeit von O(n)
+
+c)
+	Die For-Schleife hat eine Lineare Laufzeit von n.
+	Die Operation einfügen hat ebenfalls eine Laufzeit von n.
+	Damit hat die For-Schleife eine gesamt Laufzeit von n².
+	
+	Die While-Schleife wird n mal durchlaufen. 
+	Die suche nach dem kleinsten Element hat eine Laufzeit von n.
+	Das löschen dieses kleinsten Elements hat ebenfalls eine Laufzeit von n.
+	Damit hat die While-Schleife eine gesamt Laufzeit von 2n²
+
+
+	Daher kommt man auf eine gesamt Laufzeit von n²+2n²=3n².
+	Daraus ergibt sich eine Worst-Case-Laufzeit von O(n²).

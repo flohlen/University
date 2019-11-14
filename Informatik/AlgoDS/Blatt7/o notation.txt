@@ -1,0 +1,31 @@
+d) 	
+	Der zu untersuchende Programmabschnitt besteht aus 2 ineinander geschachtelten For-Schleifen. 
+	Die innere, sowie die außere For-Schleife itterieren in 1ner Schritten von 0 bis 2*n. 
+	Um die Worst-Case-Laufzeit zu berechnen nehmen wir das Produkt der beiden Schleifen. 
+	Daraus folgt: 2n*2n = 4n^2
+	Da konstante Werte für die O-Notation vernachlässigbar sind ergibt sich O(n^2) als Worst-Case-Laufzeit.
+
+
+
+e)	
+
+	Der zu untersuchende Programmabschnitt besteht aus einer For-Schleife mit n Laufzeit in der sich 2 weitere For-Schleifen befinden. 
+	Die untere dieser beiden For-Schleifen mit n/2 Laufzeit hat keinen Laufzeit verändernde Unterfunktionen. 
+	Die obere For-Schleife mit einer n^2 Laufzeit enthält, eine if un eine else Anweisung. 
+	Die else Anweisung hat keinen Einfuss auf die Laufzeit des Programms. 
+	Die if Anweisung enthält eine weitere For-Schleife mit 2n Laufzeit.
+	Um die gesamt Laufzeit zu berechnen rechnen wir nun folgendens: n*((n²*n)+n/2) => n^4 +(n^2)/2
+	Da n^4 den Größen einfluss auf die Laufzeit hat ergibt sich für das O(n^4) als Worst-Case-Laufzeit
+
+
+
+
+f)
+
+	Der zu untersuchende Programmabschnitt enthält 4 ineinander geschachtelte For-Schleifen. 
+	Die äußerste For-Schleife hat eine Laufzeit von n1/k . 
+	Die For-Schleife in der äußeren hat eine Laufzeit von n2/k . 
+	Die nächste For-Schleife in der 2. hat eine Laufzeit von k und die For-Schleife in der 3. hat ebenfalls eine Laufzeit von k.
+	Daraus ergibt sich folgende berechnung für die Gesamtlaufzeit des Programmabschnitts: (n1/k) * (n2/k) * k * k
+	Durch kürzen ergibt sich O(n1*n2) als Worst-Case-Laufzeit.
+

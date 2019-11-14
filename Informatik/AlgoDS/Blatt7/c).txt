@@ -1,0 +1,5 @@
+c)      
+        Die Verwendund von inneren Klassen im SquareTown-Programm ist sinnvoll,
+        um die Struktur zu vereinfachen und die Verständlichkeit zu verbesseren.
+        Einige Teile des Programms, die mehrfach ausgeführt werden, kann man mit Hilfe der inneren Klassen
+        zusammenfassen. 6

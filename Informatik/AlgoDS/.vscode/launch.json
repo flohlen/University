@@ -12,6 +12,16 @@
         },
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ATest",
+            "request": "launch",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "Test",
+            "args": "",
+            "projectName": "AlgoDS_9972eae4"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - FindPairs",
             "request": "launch",
             "mainClass": "FindPairs",

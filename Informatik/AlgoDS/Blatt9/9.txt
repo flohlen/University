@@ -1,0 +1,70 @@
+a)
+	
+	Der zu untersuchende Programmabschnitt besteht aus 2 ineinander geschachtelten For-Schleifen.
+	Die auﬂer Schleife hat eine Laufzeit von Log(n), da der Interator in jedem Schitt verdoppelt wird bis es nicht mehr kleiner ist als n.
+	Die innere Schleife hat eine Laufzeit von n.
+	Das Produkt beider Schleifen betr‰t n*log(n)
+	Daraus Folgt eine Worst-Case-Laufzeit von O(n*log(n))  
+
+b)
+	
+	Die do While schleife teilt k in jedem Schleifendurchlauf durch 2, bis k<10 ist. 
+	Da k zu begin des Programm abschnitts mit  dem Wert von n inizalisiert wurde ergibt sich eine Laufzeit von O(log(n))-3
+	Minus 3 weil der Algorythmus bei k<10 abbricht. 
+	Da diese Konstante f¸r die Worst-Case-Laufzeit irrelevant ist haben wir eine Worst-Case-Laufzeit von O(log(n))
+
+
+
+
+c)	Wir sortieren das gegebene Array zuerst mittels Heapsort der eine Worst-Case-Laufzeit von n*log(n) hat. 
+	Anschlieﬂend verwenden wir Folgenden Algorythmus mit ein Laufzeit von O(n)
+
+	int b=a.lenght;
+	int[] aNeu = new int[b];
+	int position = 0;
+	aNeu[0]=a[0];
+	for(int i=0;i<b;i++){
+		if(aNeu[position]<a[i]){
+			position++;
+			aNeu[position]=a[i];
+		}
+	}
+
+	Daraus ergibt sich eine gesamt Laufzeit von (n*log(n))+n
+
+	Da das n verglichen mit dem n*log(n) der weniger stark wachsende Wert ist kann man es bei der Worst Case Laufzeit vern‰chlassigen.
+
+	Daraus Folgt eine Laufzeit von O(n*log(n))
+
+
+
+d) 
+
+         	{ c.                  n<3
+	T(n) {
+         	{  T( (n/3)-1 ) n>=3
+
+e)
+
+         	{ c.                  k=0
+	T(k) {
+         	{  (T(k-1))^3   k>=1
+
+f)
+	T(n) <= 4T(n/2)+cn
+        	<= 4 [ 4T(n/8)+c(n/4) ] + cn
+        	<= 16T(n/8)+4cn
+        	<= 64T(n/32)+17cn
+        	...
+        	<= 4^i T(n/(2)^i)+icn
+        	...
+        	<= n T(1) + c n log n
+        	<= c n + c n log n
+        	= n log n
+
+
+
+	
+
+
+

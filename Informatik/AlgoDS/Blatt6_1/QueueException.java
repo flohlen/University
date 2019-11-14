@@ -1,0 +1,3 @@
+class QueueException extends Exception {
+
+}
